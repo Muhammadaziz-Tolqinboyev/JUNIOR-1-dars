@@ -17,41 +17,45 @@
   <!-- MODAL OYNA (RASMLAR) -->
   <div id="imageModal" onclick="closeModal()">
     <span class="close-modal">&times;</span>
-    <img id="modalImg" src="" alt="Full Image">
+    <img id="modalImg" src="" alt="Full Image" onclick="event.stopPropagation()">
   </div>
   
   <!-- MODAL OYNA (VIDEOLAR) -->
   <div id="videoModal" onclick="closeVideoModal()">
     <span class="close-modal">&times;</span>
-    <div class="video-container">
+    <div class="video-container" onclick="event.stopPropagation()">
       <iframe id="youtubeFrame" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
   
   <div class="animated-bg">
     
+    <!-- RESPONSIVE LOGO -->
+    <img src="./logo.png" alt="PDP Junior Logo" class="responsive-logo animate__animated animate__fadeInLeft junior-logo-image">
+    
     <!-- SLAYD 1: KIRISH -->
     <div class="slide-card active" id="slide1">
       <div class="progress-container"><div class="progress-bar"></div></div>
       
-      <div class="flex flex-col items-center justify-center h-full text-center relative">
-        <i class="fab fa-html5 absolute top-10 left-20 text-8xl text-orange-500 opacity-20 spinning"></i>
-        <i class="fab fa-css3-alt absolute bottom-20 right-20 text-8xl text-blue-500 opacity-20 floating"></i>
-        <i class="fab fa-js absolute top-20 right-40 text-8xl text-yellow-400 opacity-20 pulsing"></i>
+      <div class="flex flex-col items-center justify-center h-full text-center relative py-10">
+        <!-- Ikonkalar (Mobilda yashirin yoki kichikroq) -->
+        <i class="fab fa-html5 absolute top-5 left-5 text-6xl md:text-8xl text-orange-500 opacity-20 spinning hidden md:block"></i>
+        <i class="fab fa-css3-alt absolute bottom-20 right-10 text-6xl md:text-8xl text-blue-500 opacity-20 floating hidden md:block"></i>
+        <i class="fab fa-js absolute top-10 right-10 text-6xl md:text-8xl text-yellow-400 opacity-20 pulsing hidden md:block"></i>
         
-        <div class="mb-6 bg-white p-8 rounded-full shadow-2xl floating animate__animated animate__zoomIn">
-          <i class="fas fa-laptop-code text-7xl text-[#6c5ce7]"></i>
+        <div class="mb-4 md:mb-6 bg-white p-6 md:p-8 rounded-full shadow-2xl floating animate__animated animate__zoomIn">
+          <i class="fas fa-laptop-code text-5xl md:text-7xl text-[#6c5ce7]"></i>
         </div>
         
-        <h1 class="text-7xl font-bold mb-4 animate__animated animate__fadeInDown animate__delay-1s text-[#2d3436]">
-          FRONTEND <span class="text-[#0984e3]">DASTURLASH</span>
+        <h1 class="text-4xl md:text-7xl font-bold mb-2 md:mb-4 animate__animated animate__fadeInDown animate__delay-1s text-[#2d3436]">
+          FRONTEND <span class="text-[#0984e3] block md:inline">DASTURLASH</span>
         </h1>
         
-        <h2 class="text-3xl font-bold text-gray-500 animate__animated animate__fadeInUp animate__delay-1s">
+        <h2 class="text-xl md:text-3xl font-bold text-gray-500 animate__animated animate__fadeInUp animate__delay-1s px-4">
           1-Dars: <span class="text-[#fd79a8]">Internet Sehrgarlari</span> 🧙‍♂️
         </h2>
         
-        <button class="mt-10 bg-[#00cec9] text-white text-2xl px-10 py-4 rounded-full font-bold shadow-xl hover:bg-[#00b894] transition transform hover:scale-110 animate__animated animate__bounceIn animate__delay-2s">
+        <button class="mt-8 md:mt-10 bg-[#00cec9] text-white text-lg md:text-2xl px-8 md:px-10 py-3 md:py-4 rounded-full font-bold shadow-xl hover:bg-[#00b894] transition transform hover:scale-110 active:scale-95 animate__animated animate__bounceIn animate__delay-2s">
           Boshladik! 🚀
         </button>
       </div>
@@ -60,22 +64,22 @@
     <!-- SLAYD (IT FAKTI) -->
     <div class="slide-card" id="slide-fact">
       <div class="progress-container"><div class="progress-bar"></div></div>
-      <h1 class="text-6xl font-black text-center mb-8 text-[#fdcb6e] animate__animated animate__tada">
+      <h1 class="text-4xl md:text-6xl font-black text-center mb-6 md:mb-8 text-[#fdcb6e] animate__animated animate__tada mt-8 md:mt-0">
         BILASIZMI? 🤯
       </h1>
       
-      <div class="flex flex-col items-center justify-center h-full pb-10">
-        <div class="bg-white p-10 rounded-full shadow-2xl mb-8 floating border-4 border-[#fdcb6e]">
-          <i class="fas fa-mouse text-8xl text-gray-700"></i>
+      <div class="flex flex-col items-center justify-center h-full pb-20 md:pb-10">
+        <div class="bg-white p-6 md:p-10 rounded-full shadow-2xl mb-6 md:mb-8 floating border-4 border-[#fdcb6e]">
+          <i class="fas fa-mouse text-6xl md:text-8xl text-gray-700"></i>
         </div>
         
-        <div class="bg-white/80 p-8 rounded-3xl backdrop-blur-sm max-w-4xl border-l-8 border-[#fdcb6e] shadow-lg transform rotate-1 hover:rotate-0 transition duration-500">
-          <p class="text-3xl font-bold text-gray-700 text-center leading-relaxed">
-            Dunyodagi birinchi kompyuter sichqonchasi... <br>
-            <span class="text-6xl text-[#d63031] font-black">YOG'OCHDAN</span> <br> 
+        <div class="bg-white/80 p-6 md:p-8 rounded-2xl md:rounded-3xl backdrop-blur-sm max-w-4xl border-l-4 md:border-l-8 border-[#fdcb6e] shadow-lg">
+          <p class="text-xl md:text-3xl font-bold text-gray-700 text-center leading-relaxed">
+            Dunyodagi birinchi kompyuter sichqonchasi... <br class="hidden md:block">
+            <span class="text-4xl md:text-6xl text-[#d63031] font-black block my-2">YOG'OCHDAN</span> 
             yasalgan edi! 🪵
           </p>
-          <p class="text-center text-gray-500 mt-6 text-xl">
+          <p class="text-center text-gray-500 mt-4 md:mt-6 text-sm md:text-xl">
             Uni 1964-yilda Duglas Engelbart ixtiro qilgan.
           </p>
         </div>
@@ -85,38 +89,39 @@
     <!-- SLAYD 2: IT HAQIDA (VIDEO) -->
     <div class="slide-card" id="slide2">
       <div class="progress-container"><div class="progress-bar"></div></div>
-      <h1 class="text-5xl font-bold text-center mb-10 text-[#6c5ce7]">IT O'ZI NIMA? 🤔</h1>
-      <p class="text-center text-xl text-gray-500 mb-8">Video ko'rish uchun kartani bosing!</p>
+      <h1 class="text-3xl md:text-5xl font-bold text-center mb-4 md:mb-10 text-[#6c5ce7] mt-8 md:mt-0">IT O'ZI NIMA? 🤔</h1>
+      <p class="text-center text-sm md:text-xl text-gray-500 mb-6 md:mb-8">Video ko'rish uchun kartani bosing!</p>
       
-      <div class="grid grid-cols-3 gap-8 h-full pb-20 px-10">
-        <!-- Kelajak (Boston Dynamics) -->
+      <!-- Responsive Grid: Mobilda 1 ta ustun, Desktopda 3 ta -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 h-full pb-20 px-2 md:px-10 overflow-y-auto" style="overflow: hidden;">
+        <!-- Kelajak -->
         <div onclick="showVideo('fn3KWM1kuAw')" class="fun-card clickable-card flex flex-col items-center animate__animated animate__fadeInLeft animate__delay-1s relative">
-          <div class="bg-blue-100 p-6 rounded-full mb-4 floating">
-            <i class="fas fa-robot text-6xl text-blue-500"></i>
+          <div class="bg-blue-100 p-4 md:p-6 rounded-full mb-2 md:mb-4">
+            <i class="fas fa-robot text-4xl md:text-6xl text-blue-500"></i>
           </div>
-          <h3 class="text-2xl font-bold">Kelajak</h3>
-          <p class="text-center text-gray-500 mt-2">Robotlar va Sun'iy Intellekt bizning yordamchimiz.</p>
-          <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full"><i class="fas fa-play"></i> Video</div>
+          <h3 class="text-xl md:text-2xl font-bold">Kelajak</h3>
+          <p class="text-center text-gray-500 mt-1 md:mt-2 text-sm md:text-base">Robotlar va Sun'iy Intellekt yordamchimiz.</p>
+          <div class="absolute top-2 right-2 bg-red-500 text-white text-[10px] md:text-xs px-2 py-1 rounded-full"><i class="fas fa-play"></i> Video</div>
         </div>
         
-        <!-- O'yinlar (Minecraft) -->
+        <!-- O'yinlar -->
         <div onclick="showVideo('MmB9b5njVbA')" class="fun-card clickable-card flex flex-col items-center animate__animated animate__fadeInUp animate__delay-2s relative">
-          <div class="bg-green-100 p-6 rounded-full mb-4 floating" style="animation-delay: 0.5s;">
-            <i class="fas fa-gamepad text-6xl text-green-500"></i>
+          <div class="bg-green-100 p-4 md:p-6 rounded-full mb-2 md:mb-4">
+            <i class="fas fa-gamepad text-4xl md:text-6xl text-green-500"></i>
           </div>
-          <h3 class="text-2xl font-bold">O'yinlar</h3>
-          <p class="text-center text-gray-500 mt-2">Siz sevgan Minecraft va Roblox - bu sof KOD!</p>
-          <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full"><i class="fas fa-play"></i> Video</div>
+          <h3 class="text-xl md:text-2xl font-bold">O'yinlar</h3>
+          <p class="text-center text-gray-500 mt-1 md:mt-2 text-sm md:text-base">Minecraft va Roblox - bu sof KOD!</p>
+          <div class="absolute top-2 right-2 bg-red-500 text-white text-[10px] md:text-xs px-2 py-1 rounded-full"><i class="fas fa-play"></i> Video</div>
         </div>
         
-        <!-- Super Kuch (Code.org) -->
+        <!-- Super Kuch -->
         <div onclick="showVideo('nKIu9yen5nc')" class="fun-card clickable-card flex flex-col items-center animate__animated animate__fadeInRight animate__delay-3s relative">
-          <div class="bg-pink-100 p-6 rounded-full mb-4 floating" style="animation-delay: 1s;">
-            <i class="fas fa-mobile-alt text-6xl text-pink-500"></i>
+          <div class="bg-pink-100 p-4 md:p-6 rounded-full mb-2 md:mb-4">
+            <i class="fas fa-mobile-alt text-4xl md:text-6xl text-pink-500"></i>
           </div>
-          <h3 class="text-2xl font-bold">Super Kuch</h3>
-          <p class="text-center text-gray-500 mt-2">Bir tugma bilan dunyoni o'zgartirish imkoniyati.</p>
-          <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full"><i class="fas fa-play"></i> Video</div>
+          <h3 class="text-xl md:text-2xl font-bold">Super Kuch</h3>
+          <p class="text-center text-gray-500 mt-1 md:mt-2 text-sm md:text-base">Dunyoningizni o'zgartirish imkoniyati.</p>
+          <div class="absolute top-2 right-2 bg-red-500 text-white text-[10px] md:text-xs px-2 py-1 rounded-full"><i class="fas fa-play"></i> Video</div>
         </div>
       </div>
     </div>
@@ -124,33 +129,34 @@
     <!-- SLAYD 3: RESTORAN MISOLI (MODAL BILAN) -->
     <div class="slide-card" id="slide3">
       <div class="progress-container"><div class="progress-bar"></div></div>
-      <h1 class="text-5xl font-bold text-center mb-4">RESTORAN MISOLI 🍔</h1>
-      <p class="text-center text-xl text-gray-500 mb-8">Karta ustiga bosib rasmni ko'ring!</p>
+      <h1 class="text-3xl md:text-5xl font-bold text-center mb-4 mt-8 md:mt-0">RESTORAN MISOLI 🍔</h1>
+      <p class="text-center text-sm md:text-xl text-gray-500 mb-6 md:mb-8">Karta ustiga bosib rasmni ko'ring!</p>
       
-      <div class="flex items-center justify-center gap-10 h-3/5">
+      <!-- Responsive Flex: Mobilda ustun, Desktopda qator -->
+      <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 h-full md:h-3/5 pb-20 overflow-y-auto restaurant-slide">
         <!-- Frontend Card -->
-        <div onclick="showImage('https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" class="clickable-card w-1/3 bg-blue-50 border-4 border-blue-200 rounded-3xl p-6 text-center transform hover:scale-105 transition duration-500 relative">
-          <div class="bg-white w-24 h-24 mx-auto rounded-full flex items-center justify-center shadow-lg mb-4 pulsing">
-            <i class="fas fa-utensils text-5xl text-blue-500"></i>
+        <div onclick="showImage('https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" class="clickable-card w-full md:w-1/3 bg-blue-50 border-4 border-blue-200 rounded-3xl p-4 md:p-6 text-center transform hover:scale-105 transition duration-500 relative shadow-md">
+          <div class="bg-white w-16 h-16 md:w-24 md:h-24 mx-auto rounded-full flex items-center justify-center shadow-lg mb-2 md:mb-4 pulsing">
+            <i class="fas fa-utensils text-3xl md:text-5xl text-blue-500"></i>
           </div>
-          <h2 class="text-3xl font-bold text-blue-600">FRONTEND</h2>
-          <p class="font-bold text-gray-400 mt-2">Mijozlar Zali</p>
-          <ul class="text-left mt-6 space-y-2 font-semibold text-gray-600 bg-white p-4 rounded-xl">
+          <h2 class="text-2xl md:text-3xl font-bold text-blue-600">FRONTEND</h2>
+          <p class="font-bold text-gray-400 mt-1 md:mt-2">Mijozlar Zali</p>
+          <ul class="text-left mt-2 md:mt-6 space-y-1 md:space-y-2 font-semibold text-gray-600 bg-white p-3 md:p-4 rounded-xl text-sm md:text-base">
             <li>👀 Ko'rinish</li>
             <li>🎨 Chiroyli Dizayn</li>
           </ul>
         </div>
         
-        <div class="text-6xl text-gray-300 animate__animated animate__pulse animate__infinite">VS</div>
+        <div class="text-4xl md:text-6xl text-gray-300 animate__animated animate__pulse animate__infinite transform rotate-90 md:rotate-0 my-2">VS</div>
         
         <!-- Backend Card -->
-        <div onclick="showImage('./backend.png')" class="clickable-card w-1/3 bg-red-50 border-4 border-red-200 rounded-3xl p-6 text-center transform hover:scale-105 transition duration-500 relative">
-          <div class="bg-white w-24 h-24 mx-auto rounded-full flex items-center justify-center shadow-lg mb-4">
-            <i class="fas fa-fire-burner text-5xl text-red-500"></i>
+        <div onclick="showImage('./backend.png')" class="clickable-card w-full md:w-1/3 bg-red-50 border-4 border-red-200 rounded-3xl p-4 md:p-6 text-center transform hover:scale-105 transition duration-500 relative shadow-md">
+          <div class="bg-white w-16 h-16 md:w-24 md:h-24 mx-auto rounded-full flex items-center justify-center shadow-lg mb-2 md:mb-4">
+            <i class="fas fa-fire-burner text-3xl md:text-5xl text-red-500"></i>
           </div>
-          <h2 class="text-3xl font-bold text-red-600">BACKEND</h2>
-          <p class="font-bold text-gray-400 mt-2">Oshxona</p>
-          <ul class="text-left mt-6 space-y-2 font-semibold text-gray-600 bg-white p-4 rounded-xl">
+          <h2 class="text-2xl md:text-3xl font-bold text-red-600">BACKEND</h2>
+          <p class="font-bold text-gray-400 mt-1 md:mt-2">Oshxona</p>
+          <ul class="text-left mt-2 md:mt-6 space-y-1 md:space-y-2 font-semibold text-gray-600 bg-white p-3 md:p-4 rounded-xl text-sm md:text-base">
             <li>🧠 Mantiq</li>
             <li>💾 Pishirish Jarayoni</li>
           </ul>
@@ -161,35 +167,36 @@
     <!-- SLAYD 4: ANATOMIYA (MODAL BILAN) -->
     <div class="slide-card" id="slide4">
       <div class="progress-container"><div class="progress-bar"></div></div>
-      <h1 class="text-5xl font-bold text-center mb-8">BIZNING 3 TA DO'STIMIZ 🦸‍♂️</h1>
-      <p class="text-center text-xl text-gray-500 mb-4">Rasmni ko'rish uchun ustiga bosing!</p>
+      <h1 class="text-3xl md:text-5xl font-bold text-center mb-4 md:mb-8 mt-8 md:mt-0">BIZNING 3 TA DO'STIMIZ 🦸‍♂️</h1>
+      <p class="text-center text-sm md:text-xl text-gray-500 mb-4">Rasmni ko'rish uchun ustiga bosing!</p>
       
-      <div class="flex justify-around items-end h-3/4 pb-10">
+      <!-- Responsive Flex: Mobilda ustun, Desktopda qator -->
+      <div class="flex flex-col md:flex-row justify-around items-center md:items-end h-full md:h-3/4 pb-20 gap-6 md:gap-0 overflow-y-auto" style="overflow: hidden;">
         
-        <!-- HTML (Skeleton) -->
-        <div onclick="showImage('./html.png')" class="clickable-card text-center group animate__animated animate__fadeInUp animate__delay-1s relative">
-          <i class="fab fa-html5 text-9xl text-orange-500 group-hover:animate-bounce drop-shadow-2xl"></i>
-          <div class="bg-orange-100 p-4 rounded-xl mt-6 border-b-4 border-orange-400">
-            <h2 class="text-4xl font-black text-orange-600">HTML</h2>
-            <p class="text-xl font-bold text-gray-600">Skelet 💀</p>
+        <!-- HTML -->
+        <div onclick="showImage('./html.png')" class="clickable-card text-center group animate__animated animate__fadeInUp animate__delay-1s relative w-full md:w-auto">
+          <i class="fab fa-html5 text-7xl md:text-9xl text-orange-500 group-hover:animate-bounce drop-shadow-2xl"></i>
+          <div class="bg-orange-100 p-3 md:p-4 rounded-xl mt-2 md:mt-6 border-b-4 border-orange-400">
+            <h2 class="text-2xl md:text-4xl font-black text-orange-600">HTML</h2>
+            <p class="text-lg md:text-xl font-bold text-gray-600">Skelet 💀</p>
           </div>
         </div>
         
-        <!-- CSS (Dressed) -->
-        <div onclick="showImage('https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" class="clickable-card text-center group animate__animated animate__fadeInUp animate__delay-2s relative">
-          <i class="fab fa-css3-alt text-9xl text-blue-500 group-hover:animate-tada drop-shadow-2xl"></i>
-          <div class="bg-blue-100 p-4 rounded-xl mt-6 border-b-4 border-blue-400">
-            <h2 class="text-4xl font-black text-blue-600">CSS</h2>
-            <p class="text-xl font-bold text-gray-600">Kiyim & Teri 👕</p>
+        <!-- CSS -->
+        <div onclick="showImage('https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" class="clickable-card text-center group animate__animated animate__fadeInUp animate__delay-2s relative w-full md:w-auto">
+          <i class="fab fa-css3-alt text-7xl md:text-9xl text-blue-500 group-hover:animate-tada drop-shadow-2xl"></i>
+          <div class="bg-blue-100 p-3 md:p-4 rounded-xl mt-2 md:mt-6 border-b-4 border-blue-400">
+            <h2 class="text-2xl md:text-4xl font-black text-blue-600">CSS</h2>
+            <p class="text-lg md:text-xl font-bold text-gray-600">Kiyim & Teri 👕</p>
           </div>
         </div>
         
-        <!-- JS (Action) -->
-        <div onclick="showImage('https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cHV3ZmV0aDdvemNpbzkxOXhpcXgwZnl2YTdxOGg1eXllNHU2ZjkxYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ckAsLajQY6HxYHYRDX/giphy.gif')" class="clickable-card text-center group animate__animated animate__fadeInUp animate__delay-3s relative">
-          <i class="fab fa-js text-9xl text-yellow-400 group-hover:animate-spin drop-shadow-2xl"></i>
-          <div class="bg-yellow-100 p-4 rounded-xl mt-6 border-b-4 border-yellow-400">
-            <h2 class="text-4xl font-black text-yellow-600">JS</h2>
-            <p class="text-xl font-bold text-gray-600">Harakat 🏃‍♂️</p>
+        <!-- JS -->
+        <div onclick="showImage('https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cHV3ZmV0aDdvemNpbzkxOXhpcXgwZnl2YTdxOGg1eXllNHU2ZjkxYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ckAsLajQY6HxYHYRDX/giphy.gif')" class="clickable-card text-center group animate__animated animate__fadeInUp animate__delay-3s relative w-full md:w-auto">
+          <i class="fab fa-js text-7xl md:text-9xl text-yellow-400 group-hover:animate-spin drop-shadow-2xl"></i>
+          <div class="bg-yellow-100 p-3 md:p-4 rounded-xl mt-2 md:mt-6 border-b-4 border-yellow-400">
+            <h2 class="text-2xl md:text-4xl font-black text-yellow-600">JS</h2>
+            <p class="text-lg md:text-xl font-bold text-gray-600">Harakat 🏃‍♂️</p>
           </div>
         </div>
         
@@ -199,70 +206,71 @@
     <!-- SLAYD 5: BRAUZER ISHLASHI -->
     <div class="slide-card" id="slide5">
       <div class="progress-container"><div class="progress-bar"></div></div>
-      <h1 class="text-5xl font-bold text-center mb-10 text-[#6c5ce7]">BRAUZER QANDAY ISHLAYDI? 🌐</h1>
+      <h1 class="text-2xl md:text-5xl font-bold text-center mb-4 md:mb-10 text-[#6c5ce7] mt-8 md:mt-0">BRAUZER QANDAY ISHLAYDI? 🌐</h1>
       
-      <div class="flex flex-col items-center justify-center h-full pb-10">
-        <div class="flex items-center justify-between w-full max-w-4xl px-4">
+      <div class="flex flex-col items-center justify-center h-full pb-20 overflow-y-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between w-full max-w-4xl px-2 md:px-4 gap-4 md:gap-0">
           <div class="flex flex-col items-center animate__animated animate__fadeInLeft">
-            <div class="bg-gray-100 p-6 rounded-full shadow-lg z-10 relative">
-              <i class="fas fa-laptop text-6xl text-gray-700"></i>
+            <div class="bg-gray-100 p-4 md:p-6 rounded-full shadow-lg z-10 relative">
+              <i class="fas fa-laptop text-4xl md:text-6xl text-gray-700"></i>
             </div>
-            <h3 class="text-2xl font-bold mt-4 text-gray-600">Siz</h3>
+            <h3 class="text-xl md:text-2xl font-bold mt-2 md:mt-4 text-gray-600">Siz</h3>
           </div>
-          <div class="flex-1 mx-4 relative h-2 bg-gray-200 rounded-full overflow-hidden">
-            <div class="absolute top-0 left-0 w-1/3 h-full bg-[#00cec9] animate-slide-right"></div>
+          <!-- Animatsiya yo'li (Mobilda vertikal) -->
+          <div class="flex-1 mx-4 relative h-10 w-2 md:h-2 md:w-full bg-gray-200 rounded-full overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1/3 md:w-1/3 md:h-full bg-[#00cec9] animate-slide-right"></div>
           </div>
           <div class="flex flex-col items-center animate__animated animate__fadeInRight">
-            <div class="bg-blue-100 p-6 rounded-full shadow-lg z-10">
-              <i class="fas fa-server text-6xl text-blue-500"></i>
+            <div class="bg-blue-100 p-4 md:p-6 rounded-full shadow-lg z-10">
+              <i class="fas fa-server text-4xl md:text-6xl text-blue-500"></i>
             </div>
-            <h3 class="text-2xl font-bold mt-4 text-blue-600">Server</h3>
+            <h3 class="text-xl md:text-2xl font-bold mt-2 md:mt-4 text-blue-600">Server</h3>
           </div>
         </div>
-        <div class="grid grid-cols-2 gap-6 mt-12 w-full max-w-5xl">
-          <div class="bg-blue-50 p-6 rounded-2xl border-l-4 border-blue-400">
-            <h4 class="font-bold text-lg text-blue-700">1. So'rov Yuborish</h4>
-            <p class="text-gray-600">"Menga saytni ko'rsat!"</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-6 md:mt-12 w-full max-w-5xl px-2">
+          <div class="bg-blue-50 p-4 md:p-6 rounded-2xl border-l-4 border-blue-400">
+            <h4 class="font-bold text-base md:text-lg text-blue-700">1. So'rov Yuborish</h4>
+            <p class="text-sm md:text-base text-gray-600">"Menga saytni ko'rsat!"</p>
           </div>
-          <div class="bg-green-50 p-6 rounded-2xl border-l-4 border-green-400">
-            <h4 class="font-bold text-lg text-green-700">2. Javob Qaytarish</h4>
-            <p class="text-gray-600">"Mana HTML, CSS, JS fayllar"</p>
+          <div class="bg-green-50 p-4 md:p-6 rounded-2xl border-l-4 border-green-400">
+            <h4 class="font-bold text-base md:text-lg text-green-700">2. Javob Qaytarish</h4>
+            <p class="text-sm md:text-base text-gray-600">"Mana HTML, CSS, JS fayllar"</p>
           </div>
         </div>
       </div>
     </div>
     
-    <!-- SLAYD 6: REAL LOYIHALAR (HAVOLALAR BILAN) -->
+    <!-- SLAYD 6: REAL LOYIHALAR -->
     <div class="slide-card" id="slide6">
       <div class="progress-container"><div class="progress-bar"></div></div>
-      <h1 class="text-5xl font-bold text-center mb-6">REAL LOYIHALAR 🌍</h1>
-      <p class="text-center text-xl text-gray-500 mb-8">Saytga kirish uchun kartani bosing!</p>
+      <h1 class="text-3xl md:text-5xl font-bold text-center mb-4 md:mb-6 mt-8 md:mt-0">REAL LOYIHALAR 🌍</h1>
+      <p class="text-center text-sm md:text-xl text-gray-500 mb-6 md:mb-8">Saytga kirish uchun kartani bosing!</p>
       
-      <div class="flex gap-10 justify-center items-center h-full pb-20">
+      <div class="flex flex-col md:flex-row gap-6 md:gap-10 justify-center items-center h-full pb-20 overflow-y-auto px-4">
         <!-- YouTube Card -->
-        <a href="https://www.youtube.com" target="_blank" class="block bg-white rounded-3xl shadow-xl overflow-hidden w-96 transform rotate-3 hover:rotate-0 transition duration-500 cursor-pointer animate__animated animate__zoomInLeft hover:shadow-2xl no-underline">
+        <a href="https://www.youtube.com" target="_blank" class="block bg-white rounded-3xl shadow-xl overflow-hidden w-full md:w-96 transform rotate-0 md:rotate-3 hover:rotate-0 transition duration-500 cursor-pointer animate__animated animate__zoomInLeft hover:shadow-2xl no-underline">
           <div class="bg-red-600 p-4 flex items-center gap-2">
-            <i class="fab fa-youtube text-white text-3xl"></i>
-            <span class="text-white font-bold text-xl">YouTube</span>
+            <i class="fab fa-youtube text-white text-2xl md:text-3xl"></i>
+            <span class="text-white font-bold text-lg md:text-xl">YouTube</span>
           </div>
           <div class="p-4 space-y-4">
-            <div class="h-32 bg-gray-200 rounded-xl flex justify-center items-center relative">
-              <i class="fas fa-play text-4xl text-red-500"></i>
+            <div class="h-24 md:h-32 bg-gray-200 rounded-xl flex justify-center items-center relative">
+              <i class="fas fa-play text-3xl md:text-4xl text-red-500"></i>
             </div>
-            <p class="text-sm text-gray-500 mt-4 border-t pt-2">
+            <p class="text-xs md:text-sm text-gray-500 mt-4 border-t pt-2">
               Videolar, layklar - <span class="text-red-600 font-bold">Frontend!</span>
             </p>
           </div>
         </a>
         <!-- Telegram Card -->
-        <a href="https://web.telegram.org" target="_blank" class="block bg-white rounded-3xl shadow-xl overflow-hidden w-96 transform -rotate-3 hover:rotate-0 transition duration-500 cursor-pointer animate__animated animate__zoomInRight hover:shadow-2xl no-underline">
+        <a href="https://web.telegram.org" target="_blank" class="block bg-white rounded-3xl shadow-xl overflow-hidden w-full md:w-96 transform rotate-0 md:-rotate-3 hover:rotate-0 transition duration-500 cursor-pointer animate__animated animate__zoomInRight hover:shadow-2xl no-underline">
           <div class="bg-blue-500 p-4 flex items-center gap-2">
-            <i class="fab fa-telegram text-white text-3xl"></i>
-            <span class="text-white font-bold text-xl">Telegram</span>
+            <i class="fab fa-telegram text-white text-2xl md:text-3xl"></i>
+            <span class="text-white font-bold text-lg md:text-xl">Telegram</span>
           </div>
-          <div class="p-4 h-56 bg-blue-50 relative">
-            <div class="bg-white p-2 rounded-lg rounded-tl-none shadow mb-2 w-3/4">Assalomu alaykum</div>
-            <div class="bg-blue-200 p-2 rounded-lg rounded-tr-none shadow mb-2 w-3/4 ml-auto">Yaxshimisiz?</div>
+          <div class="p-4 h-40 md:h-56 bg-blue-50 relative">
+            <div class="bg-white p-2 rounded-lg rounded-tl-none shadow mb-2 w-3/4 text-sm">Assalomu alaykum!</div>
+            <div class="bg-blue-200 p-2 rounded-lg rounded-tr-none shadow mb-2 w-3/4 ml-auto text-sm">Va alaykum assalom</div>
           </div>
         </a>
       </div>
@@ -271,26 +279,36 @@
     <!-- SLAYD 7: VIKTORINA -->
     <div class="slide-card" id="slide7">
       <div class="progress-container"><div class="progress-bar"></div></div>
-      <h1 class="text-6xl font-black text-center mb-10 text-[#6c5ce7] animate__animated animate__rubberBand">
+      <h1 class="text-3xl md:text-6xl font-black text-center mb-6 md:mb-10 text-[#6c5ce7] animate__animated animate__rubberBand mt-8 md:mt-0">
         🧠 BILIMLARNI SINAYMIZ!
       </h1>
-      <div class="space-y-6 max-w-4xl mx-auto w-full px-10">
-        <div onclick="revealAnswer(this)" class="bg-white border-l-8 border-orange-500 p-6 rounded-r-2xl shadow-lg cursor-pointer hover:bg-orange-50 transition">
+      <div class="space-y-4 md:space-y-6 max-w-4xl mx-auto w-full px-2 md:px-10 pb-20 overflow-y-auto">
+        <div onclick="revealAnswer(this)" class="bg-white border-l-8 border-orange-500 p-4 md:p-6 rounded-r-2xl shadow-lg cursor-pointer hover:bg-orange-50 transition">
           <div class="flex justify-between items-center">
-            <h3 class="text-2xl font-bold text-gray-700">1. Saytning "Skeleti" qaysi? 💀</h3>
-            <i class="fas fa-question-circle text-3xl text-orange-300"></i>
+            <h3 class="text-lg md:text-2xl font-bold text-gray-700">1. Saytning "Skeleti" qaysi? 💀</h3>
+            <i class="fas fa-question-circle text-2xl md:text-3xl text-orange-300"></i>
           </div>
           <div class="answer hidden mt-4 pt-4 border-t border-gray-200">
-            <p class="text-3xl font-black text-orange-600 animate__animated animate__flipInX">HTML! ✅</p>
+            <p class="text-2xl md:text-3xl font-black text-orange-600 animate__animated animate__flipInX">HTML! ✅</p>
           </div>
         </div>
-        <div onclick="revealAnswer(this)" class="bg-white border-l-8 border-blue-500 p-6 rounded-r-2xl shadow-lg cursor-pointer hover:bg-blue-50 transition">
+        <div onclick="revealAnswer(this)" class="bg-white border-l-8 border-blue-500 p-4 md:p-6 rounded-r-2xl shadow-lg cursor-pointer hover:bg-blue-50 transition">
           <div class="flex justify-between items-center">
-            <h3 class="text-2xl font-bold text-gray-700">2. Saytga "Go'zallik" beruvchi? 💅</h3>
-            <i class="fas fa-question-circle text-3xl text-blue-300"></i>
+            <h3 class="text-lg md:text-2xl font-bold text-gray-700">2. Saytga "Go'zallik" beruvchi? 💅</h3>
+            <i class="fas fa-question-circle text-2xl md:text-3xl text-blue-300"></i>
           </div>
           <div class="answer hidden mt-4 pt-4 border-t border-gray-200">
-            <p class="text-3xl font-black text-blue-600 animate__animated animate__flipInX">CSS! ✅</p>
+            <p class="text-2xl md:text-3xl font-black text-blue-600 animate__animated animate__flipInX">CSS! ✅</p>
+          </div>
+        </div>
+        <!-- Backend savoli -->
+        <div onclick="revealAnswer(this)" class="bg-white border-l-8 border-yellow-400 p-4 md:p-6 rounded-r-2xl shadow-lg cursor-pointer hover:bg-yellow-50 transition">
+          <div class="flex justify-between items-center">
+            <h3 class="text-lg md:text-2xl font-bold text-gray-700">3. Restoranda "Oshpaz" kim? 👨‍🍳</h3>
+            <i class="fas fa-question-circle text-2xl md:text-3xl text-yellow-300"></i>
+          </div>
+          <div class="answer hidden mt-4 pt-4 border-t border-gray-200">
+            <p class="text-2xl md:text-3xl font-black text-yellow-600 animate__animated animate__flipInX">Backend! ✅</p>
           </div>
         </div>
       </div>
@@ -299,12 +317,17 @@
     <!-- SLAYD 8: TYPING -->
     <div class="slide-card" id="slide8">
       <div class="progress-container"><div class="progress-bar"></div></div>
-      <h1 class="text-5xl font-bold text-center mb-6">KLAVIATURA NINZASI 🐱‍👤</h1>
-      <div class="flex justify-center gap-10">
-        <a href="https://www.typingclub.com/" target="_blank" class="group bg-white p-8 rounded-3xl shadow-xl text-center border-4 border-transparent hover:border-[#6c5ce7] transition duration-300 transform hover:-translate-y-5">
-          <img src="./typingclub.png" class="h-20 mx-auto mb-4">
-          <h3 class="text-2xl font-bold text-gray-700">TypingClub</h3>
+      <h1 class="text-3xl md:text-5xl font-bold text-center mb-6 md:mb-6 mt-8 md:mt-0">KLAVIATURA NINZASI 🐱‍👤</h1>
+      <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-10 h-full pb-20 overflow-y-auto px-4">
+        <a href="https://www.typingclub.com/" target="_blank" class="group bg-white p-6 md:p-8 rounded-3xl shadow-xl text-center border-4 border-transparent hover:border-[#6c5ce7] transition duration-300 transform hover:-translate-y-5 no-underline w-full md:w-auto">
+          <img src="./typingclub.png" class="h-16 md:h-20 mx-auto mb-4 object-contain">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-700">TypingClub</h3>
           <span class="inline-block bg-[#6c5ce7] text-white px-4 py-1 rounded-full text-sm mt-4">O'yin o'ynash 🎮</span>
+        </a>
+        <a href="https://www.ratatype.com/" target="_blank" class="group bg-white p-6 md:p-8 rounded-3xl shadow-xl text-center border-4 border-transparent hover:border-[#ffeaa7] transition duration-300 transform hover:-translate-y-5 no-underline w-full md:w-auto">
+          <img src="./ratatype.png" class="h-4 md:h-20 mx-auto mb-4 object-contain">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-700">Ratatype</h3>
+          <span class="inline-block bg-[#fdcb6e] text-gray-800 px-4 py-1 rounded-full text-sm mt-4">Musobaqa 🏆</span>
         </a>
       </div>
     </div>
@@ -312,12 +335,12 @@
     <!-- SLAYD 9: YAKUN VA UYGA VAZIFA (YANGILANGAN) -->
     <div class="slide-card" id="slide9">
       <div class="progress-container"><div class="progress-bar"></div></div>
-      <div class="flex flex-col items-center justify-center h-full text-center">
-        <i class="fas fa-trophy text-9xl text-yellow-400 mb-6 animate__animated animate__tada animate__infinite"></i>
-        <h1 class="text-6xl font-black text-[#2d3436] mb-4">TABRIKLAYMAN! 🎉</h1>
-        <div class="bg-blue-50 p-8 rounded-3xl border-4 border-blue-200 animate__animated animate__fadeInUp">
-          <h3 class="text-3xl font-bold text-blue-600 mb-6">🏠 UYGA VAZIFA:</h3>
-          <ul class="text-left text-xl space-y-4 font-semibold text-gray-700">
+      <div class="flex flex-col items-center justify-center h-full text-center pb-20">
+        <i class="fas fa-trophy text-7xl md:text-9xl text-yellow-400 mb-4 md:mb-6 animate__animated animate__tada animate__infinite"></i>
+        <h1 class="text-4xl md:text-6xl font-black text-[#2d3436] mb-4 md:mb-4">TABRIKLAYMAN! 🎉</h1>
+        <div class="bg-blue-50 p-6 md:p-8 rounded-3xl border-4 border-blue-200 animate__animated animate__fadeInUp mx-4">
+          <h3 class="text-2xl md:text-3xl font-bold text-blue-600 mb-4 md:mb-6">🏠 UYGA VAZIFA:</h3>
+          <ul class="text-left text-base md:text-xl space-y-2 md:space-y-4 font-semibold text-gray-700">
             <li class="flex items-center gap-3">
               <i class="far fa-check-square text-green-500"></i> TypingClub da <strong>5-bosqichgacha</strong> yetib kelish! 🖐️
             </li>
@@ -329,12 +352,11 @@
       </div>
     </div>
     
-    <button class="nav-btn prev-btn" onclick="changeSlide(-1)"><i class="fas fa-arrow-left mr-2"></i> Ortga</button>
-    <button class="nav-btn next-btn" onclick="changeSlide(1)">Oldinga <i class="fas fa-arrow-right ml-2"></i></button>
+    <button class="nav-btn prev-btn" onclick="changeSlide(-1)"><i class="fas fa-arrow-left mr-2"></i> <span class="hidden md:inline">Ortga</span></button>
+    <button class="nav-btn next-btn" onclick="changeSlide(1)"><span class="hidden md:inline">Oldinga</span> <i class="fas fa-arrow-right ml-2"></i></button>
     
-  </div>
-  
-  <script src="./main.js"></script>
-  
-</body>
-</html>
+    
+    <script src="./main.js"></script>
+    
+  </body>
+  </html>

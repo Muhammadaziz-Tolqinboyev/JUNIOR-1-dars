@@ -1,4 +1,3 @@
-
 let currentSlideIndex = 0;
 const slides = document.querySelectorAll('.slide-card');
 const progressBar = document.querySelectorAll('.progress-bar');
