@@ -1,16 +1,11 @@
- @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&family=Nunito:wght@400;700;900&display=swap');
- 
- html {
-  overflow: hidden;
- }
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&family=Nunito:wght@400;700;900&display=swap');
 
- body {
+body {
   font-family: 'Nunito', sans-serif;
   overflow: hidden; /* Slayd tashqarisiga chiqmasligi uchun */
   margin: 0;
   padding: 0;
   color: #2d3436;
-  overflow: hidden;
 }
 
 /* --- HARAKATLANUVCHI FON --- */
@@ -206,34 +201,28 @@ h1 { font-family: 'Fredoka', sans-serif; text-shadow: 2px 2px 0px rgba(0,0,0,0.1
   }
 }
 
-/* --- RESPONSIVE LOGO --- */
-.responsive-logo {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 50px; /* Mobilda kichik */
-  height: auto;
-  z-index: 50;
-  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
-}
-@media (min-width: 768px) {
-  .responsive-logo {
-    top: 24px;
-    left: 24px;
-    width: 80px; /* Desktopda katta */
-  }
-}
-
-.junior-logo-image {
-  position: fixed;
-  top: 13%;
-  left: 7%;
-  width: 200px;
-  height: auto;
-  z-index: 3;
-}
-
 .restaurant-slide {
   margin-top: 100px;
   overflow: hidden !important;
+}
+
+/* --- JUNIOR LOGO IMAGE (Responsive Fix) --- */
+.junior-logo-image {
+  position: fixed;
+  z-index: 50;
+  
+  /* Kichik ekranlar uchun (Mobil) */
+  top: 8%;
+  left: 6%;
+  width: 60px; /* Mobilda ixcham o'lcham */
+  height: auto;
+}
+
+/* Katta ekranlar uchun (Desktop) */
+@media (min-width: 1024px) {
+  .junior-logo-image {
+    top: 13%;
+    left: 7%;
+    width: 200px; /* Katta ekranda asl o'lcham */
+  }
 }

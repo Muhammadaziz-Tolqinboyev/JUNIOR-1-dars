@@ -1,12 +1,12 @@
-let currentSlideIndex = 0;
-const slides = document.querySelectorAll('.slide-card');
-const progressBar = document.querySelectorAll('.progress-bar');
-const imageModal = document.getElementById('imageModal');
-const modalImg = document.getElementById('modalImg');
-const videoModal = document.getElementById('videoModal');
-const youtubeFrame = document.getElementById('youtubeFrame');
-
-function updateProgressBar() {
+ let currentSlideIndex = 0;
+ const slides = document.querySelectorAll('.slide-card');
+ const progressBar = document.querySelectorAll('.progress-bar');
+ const imageModal = document.getElementById('imageModal');
+ const modalImg = document.getElementById('modalImg');
+ const videoModal = document.getElementById('videoModal');
+ const youtubeFrame = document.getElementById('youtubeFrame');
+ 
+ function updateProgressBar() {
   progressBar.forEach(bar => {
     let width = ((currentSlideIndex + 1) / slides.length) * 100;
     bar.style.width = width + '%';
