@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&family=Nunito:wght@400;700;900&display=swap');
+
+body {
+  font-family: 'Nunito', sans-serif;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  color: #2d3436;
+}
+
+/* --- HARAKATLANUVCHI FON --- */
+.animated-bg {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- SLAYD KARTASI --- */
+.slide-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  width: 90%;
+  height: 85%;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  padding: 40px;
+  display: none;
+  flex-direction: column;
+  position: relative;
+  border: 4px solid rgba(255,255,255,0.6);
+  overflow: hidden;
+}
+
+.slide-card.active {
+  display: flex;
+  animation: bounceInUp 0.8s;
+}
+
+/* --- MODAL OYNA (RASMLAR UCHUN) --- */
+#imageModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+#modalImg {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(255,255,255,0.2);
+  border: 4px solid white;
+  animation: zoomIn 0.3s;
+  object-fit: contain;
+  background: white;
+}
+
+/* --- MODAL OYNA (VIDEOLAR UCHUN) --- */
+#videoModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.video-container {
+  width: 80%;
+  max-width: 900px;
+  aspect-ratio: 16/9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(108, 92, 231, 0.4);
+  border: 2px solid #6c5ce7;
+  animation: zoomIn 0.3s;
+  background: black;
+  position: relative;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: transform 0.2s;
+}
+.close-modal:hover { transform: scale(1.2); color: #ff7675; }
+
+/* --- ANIMATSIYALAR --- */
+.floating {  animation: float 3s ease-in-out infinite; }
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.pulsing { animation: pulse 2s infinite; }
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.spinning { animation: spin 10s linear infinite; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+@keyframes slideRight {
+  0% { left: -30%; }
+  100% { left: 100%; }
+}
+.animate-slide-right {
+  animation: slideRight 2s infinite linear;
+}
+
+/* --- TIPOGRAFIKA VA STIL --- */
+h1 { font-family: 'Fredoka', sans-serif; text-shadow: 2px 2px 0px rgba(0,0,0,0.1); }
+
+.nav-btn {
+  position: absolute;
+  bottom: 30px;
+  background: #2d3436;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 10;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.nav-btn:hover { transform: scale(1.1) translateY(-5px); background: #0984e3; }
+.prev-btn { left: 40px; }
+.next-btn { right: 40px; }
+
+.progress-container {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 8px; background: rgba(0,0,0,0.1); z-index: 20;
+}
+.progress-bar {
+  height: 100%; background: #00cec9; width: 0%; transition: width 0.5s;
+}
+
+.fun-card {
+  background: white; border-radius: 20px; padding: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: all 0.3s; border-bottom: 5px solid #dfe6e9;
+}
+.fun-card:hover { transform: translateY(-10px) rotate(2deg); border-bottom-color: #fd79a8; }
+
+.clickable-card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.clickable-card:active {
+  transform: scale(0.95);
+}
+.clickable-card:hover::after {
+  content: '👉 Ko\'rish uchun bosing';
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  opacity: 1;
+}
